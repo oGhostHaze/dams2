@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" {{-- class="{{ Auth::user()->dark_mode ? 'dark' : '' }}{{ Auth::user()->color_scheme != 'default' ? ' ' . Auth::user()->color_scheme : '' }}" --}} class="theme-2">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" {{-- class="{{ Auth::user()->dark_mode ? 'dark' : '' }}{{ Auth::user()->color_scheme != 'default' ? ' ' . Auth::user()->color_scheme : '' }}" --}} class="theme-2" data-theme="forest">
 
 <head>
     <meta charset="utf-8">

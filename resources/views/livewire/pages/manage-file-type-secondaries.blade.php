@@ -31,6 +31,34 @@
                 <h2 class="mt-2 mr-auto text-lg font-medium intro-y">
                     File Manager
                 </h2>
+                <!-- BEGIN: File Manager Filter -->
+                <div class="flex flex-col-reverse items-center justify-end intro-y sm:flex-row">
+                    <div class="flex w-full sm:w-auto">
+                        <a class="mr-2 shadow-md btn btn-primary" href="{{ route('file.upload.second', $type_id) }}">
+                            Upload to Directory
+                        </a>
+                        <div class="dropdown">
+                            <button class="px-2 dropdown-toggle btn box" aria-expanded="false"
+                                data-tw-toggle="dropdown">
+                                <span class="flex items-center justify-center w-5 h-5"> <i class="w-4 h-4"
+                                        data-feather="plus"></i> </span>
+                            </button>
+                            <div class="w-40 dropdown-menu">
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="" class="dropdown-item"> <i data-feather="file"
+                                                class="w-4 h-4 mr-2"></i> Share Files </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="dropdown-item"> <i data-feather="settings"
+                                                class="w-4 h-4 mr-2"></i> Settings </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: File Manager Filter -->
             </div>
             <div class="col-span-12">
                 <!-- BEGIN: Directory & Files -->

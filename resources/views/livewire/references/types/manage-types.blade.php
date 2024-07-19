@@ -120,6 +120,8 @@
                     </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const code = Swal.getHtmlContainer().querySelector('#code');
                     const description = Swal.getHtmlContainer().querySelector('#description');
@@ -161,6 +163,8 @@
                     </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const code2 = Swal.getHtmlContainer().querySelector('#code2');
                     const description2 = Swal.getHtmlContainer().querySelector('#description2');
@@ -202,6 +206,8 @@
                 </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const code3 = Swal.getHtmlContainer().querySelector('#code3');
                     const description3 = Swal.getHtmlContainer().querySelector('#description3');
@@ -243,6 +249,8 @@
                 </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const code4 = Swal.getHtmlContainer().querySelector('#code4');
                     const description4 = Swal.getHtmlContainer().querySelector('#description4');
@@ -269,6 +277,8 @@
                     </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const update_description = Swal.getHtmlContainer().querySelector('#update_description');
                     update_description.value = type_name;
@@ -294,6 +304,8 @@
                 </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const update_description2 = Swal.getHtmlContainer().querySelector('#update_description2');
                     update_description2.value = type_name;
@@ -319,6 +331,8 @@
                 </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const update_description3 = Swal.getHtmlContainer().querySelector('#update_description3');
                     update_description3.value = type_name;
@@ -344,6 +358,8 @@
                 </div>`,
                 showCancelButton: true,
                 confirmButtonText: `Save`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 didOpen: () => {
                     const update_description4 = Swal.getHtmlContainer().querySelector('#update_description4');
                     update_description4.value = type_name;

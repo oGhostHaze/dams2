@@ -9,6 +9,7 @@ use App\Http\Livewire\Pages\ManageFileTypeSecondaries;
 use App\Http\Livewire\Pages\ManageFileTypeTertiaries;
 use App\Http\Livewire\Pages\ManageFileTypeTertiariesSub;
 use App\Http\Livewire\Pages\UploadFile;
+use App\Http\Livewire\Pages\UploadFileSecondary;
 use App\Http\Livewire\Pages\ViewFile;
 use App\Http\Livewire\PdfViewer;
 use App\Http\Livewire\References\ManageTypes;
@@ -50,8 +51,10 @@ Route::middleware([
     Route::get('/types/{type_id}/second-level', ManageFileTypeSecondaries::class)->name('type.second.manager');
     Route::get('/types/{type_id}/third-level', ManageFileTypeTertiaries::class)->name('type.third.manager');
     Route::get('/types/{type_id}/fourth-level', ManageFileTypeTertiariesSub::class)->name('type.fourth.manager');
-    Route::get('/file-manager/upload', UploadFile::class)->name('file.upload');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+
+    Route::get('/file-manager/upload', UploadFile::class)->name('file.upload');
+    Route::get('/file-manager/upload/secondary/{type_id}', UploadFileSecondary::class)->name('file.upload.second');
 
     Route::prefix('/references')->name('ref.')->group(
         function () {
