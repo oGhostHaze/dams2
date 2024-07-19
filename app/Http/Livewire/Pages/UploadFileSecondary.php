@@ -53,7 +53,7 @@ class UploadFileSecondary extends Component
         $archive = new FileArchive;
         $archive->title = $this->title;
         $archive->file_name = $this->file->store('documents', 'dams');
-        $archive->file_name = $this->file->store('public');
+        $archive->file_name = $this->file->store();
         $archive->file_ext = $this->file->getClientOriginalExtension();
         $archive->tags = implode(',', $this->archive_tags);
         $archive->type_id = $this->type_id;
