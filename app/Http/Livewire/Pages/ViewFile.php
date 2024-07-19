@@ -7,20 +7,26 @@ use App\Models\FileArchive;
 use Livewire\Component;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
+use Livewire\WithFileUploads;
 
 class ViewFile extends Component
 {
+    use WithFileUploads;
 
     public $archive_id, $size, $last_modified;
 
     public function render()
     {
         $archive = FileArchive::find($this->archive_id);
-        $this->size = Helper::formatSizeUnits(Storage::disk('dams')->size($archive->file_name));
-        $this->last_modified = Helper::format_date1(Storage::disk('dams')->lastModified($archive->file_name));
+        $file_name = str_replace("public/", "", $archive->file_name);
+        $file_name = str_replace("documents/", "", $archive->file_name);
+
+        $this->size = Helper::formatSizeUnits(Storage::disk('public')->size($file_name));
+        $this->last_modified = Helper::format_date1(Storage::disk('public')->lastModified($file_name));
 
         return view('livewire.pages.view-file', compact(
-            'archive'
+            'archive',
+            'file_name',
         ));
     }
 
