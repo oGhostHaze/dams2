@@ -166,7 +166,7 @@
                         <button id="next" class="!text-black btn btn-outline btn-sm">Next</button>
                         &nbsp; &nbsp;
                         <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-                        <a href="{{ url('/dams/' . $archive->file_name) }}" target="_blank"
+                        <a href="{{ url('/storage/' . $archive->file_name) }}" target="_blank"
                             class="ml-5 !text-black btn btn-outline btn-sm">Full
                             View</a>
                     </div>
@@ -183,7 +183,7 @@
     <script type="module">
         // If absolute URL from the remote server is provided, configure the CORS
         // header on that server.
-        var url = '{{ url('/dams/' . $archive->file_name) }}';
+        var url = '{{ url('/storage/' . $archive->file_name) }}';
 
         // Loaded via <script> tag, create shortcut to access PDF.js exports.
         var {
