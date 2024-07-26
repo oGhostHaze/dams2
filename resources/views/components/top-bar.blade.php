@@ -4,7 +4,7 @@
         <!-- BEGIN: Logo -->
         <a href="{{ route('top.dashboard') }}" class="hidden align-middle -intro-x md:flex">
             <img alt="Gledco" class="w-auto h-6" src="{{ url('dist/images/logo.svg') }}">
-            <span class="ml-3 text-lg text-white"> Document Archive Management System </span>
+            <span class="ml-3 text-lg text-white"> {{ config('app.name', 'Laravel') }} </span>
         </a>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->

@@ -78,17 +78,17 @@ module.exports = {
         'cursor-grab', 'h-screen', 'space-y-2', 'text-success', 'text-danger', 'text-error'
     ],
 
-    // daisyui: {
-    //   themes: ["forest"],
-    // },
-    // plugins: [require("daisyui"), require("@tailwindcss/forms")],
-    // variants: {
-    //     extend: {
-    //         boxShadow: ["dark"],
-    //     },
-    // },
-
-    plugins: [require("@tailwindcss/forms")],
+    daisyui: {
+        themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+        darkTheme: "forest", // name of one of the included themes for dark mode
+        base: false, // applies background color and foreground color for root element by default
+        styled: true, // include daisyUI colors and design decisions for all components
+        utils: true, // adds responsive and modifier utility classes
+        prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+        logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
+        themeRoot: ":root",
+    },
+    plugins: [require("daisyui"), require("@tailwindcss/forms")],
     variants: {
         extend: {
             boxShadow: ["dark"],
