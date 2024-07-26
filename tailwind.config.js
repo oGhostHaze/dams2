@@ -78,10 +78,17 @@ module.exports = {
         'cursor-grab', 'h-screen', 'space-y-2', 'text-success', 'text-danger', 'text-error'
     ],
 
-    daisyui: {
-      themes: ["forest"],
-    },
-    plugins: [require("daisyui"), require("@tailwindcss/forms")],
+    // daisyui: {
+    //   themes: ["forest"],
+    // },
+    // plugins: [require("daisyui"), require("@tailwindcss/forms")],
+    // variants: {
+    //     extend: {
+    //         boxShadow: ["dark"],
+    //     },
+    // },
+
+    plugins: [require("@tailwindcss/forms")],
     variants: {
         extend: {
             boxShadow: ["dark"],

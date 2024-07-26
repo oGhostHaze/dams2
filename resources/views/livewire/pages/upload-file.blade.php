@@ -28,35 +28,28 @@
                 </div>
                 <div>
                     <label for="type" class="form-label">1st Level Type</label>
-                    <div class="w-full join">
-                        <div>
-                            <div>
-                                <input class="bg-slate-200 input input-bordered join-item" placeholder="Search"
-                                    wire:model.lazy="search_type" />
-                            </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="bg-transparent" placeholder="Search" wire:model.lazy="search_type" />
                         </div>
-                        <select class="w-full join-item" wire:model='type_id'>
+                        <select class="form-control" wire:model='type_id'>
                             <option value="">{{ !$types ? 'N/A' : '' }}</option>
                             @foreach ($types as $type)
                                 <option value="{{ $type->id }}">{{ $type->description }}</option>
                             @endforeach
                         </select>
-                        @error('search_type3')
-                            <label for="tags" class="form-label text-error">{{ $message }}</label>
-                        @enderror
                     </div>
+                    @error('search_type3')
+                        <label for="tags" class="form-label text-error">{{ $message }}</label>
+                    @enderror
                 </div>
                 <div>
                     <label for="type" class="form-label">2nd Level Type</label>
-                    <div class="w-full join">
-                        <div>
-                            <div>
-                                <input class="bg-slate-200 input input-bordered join-item" placeholder="Search"
-                                    wire:model.lazy="search_type2" />
-                            </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="bg-transparent" placeholder="Search" wire:model.lazy="search_type2" />
                         </div>
-                        <select class="w-full join-item" wire:model='type_secondary_id'
-                            placeholder="{{ !$types2 ? 'N/A' : '' }}">
+                        <select class="form-control" wire:model='type_secondary_id'>
                             <option value="">{{ !$types2 ? 'N/A' : '' }}</option>
                             @foreach ($types2 as $type)
                                 <option value="{{ $type->id }}">{{ $type->description }}</option>
@@ -69,15 +62,11 @@
                 </div>
                 <div>
                     <label for="type" class="form-label">3rd Level Type</label>
-                    <div class="w-full join">
-                        <div>
-                            <div>
-                                <input class="bg-slate-200 input input-bordered join-item" placeholder="Search"
-                                    wire:model.lazy="search_type3" />
-                            </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="bg-transparent" placeholder="Search" wire:model.lazy="search_type3" />
                         </div>
-                        <select class="w-full join-item" wire:model='type_tertiary_id'
-                            placeholder="{{ !$types3 ? 'N/A' : '' }}">
+                        <select class="form-control" wire:model='type_tertiary_id'>
                             <option value="">{{ !$types3 ? 'N/A' : '' }}</option>
                             @foreach ($types3 as $type)
                                 <option value="{{ $type->id }}">{{ $type->description }}</option>
@@ -90,15 +79,11 @@
                 </div>
                 <div>
                     <label for="type" class="form-label">4th Level Type</label>
-                    <div class="w-full join">
-                        <div>
-                            <div>
-                                <input class="bg-slate-200 input input-bordered join-item" placeholder="Search"
-                                    wire:model.lazy="search_type4" />
-                            </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="bg-transparent" placeholder="Search" wire:model.lazy="search_type4" />
                         </div>
-                        <select class="w-full join-item" wire:model='type_tertiary_sub_id'
-                            placeholder="{{ !$types4 ? 'N/A' : '' }}">
+                        <select class="form-control" wire:model='type_tertiary_sub_id'>
                             <option value="">{{ !$types4 ? 'N/A' : '' }}</option>
                             @foreach ($types4 as $type)
                                 <option value="{{ $type->id }}">{{ $type->description }}</option>
@@ -109,42 +94,6 @@
                         <label for="tags" class="form-label text-error">{{ $message }}</label>
                     @enderror
                 </div>
-                {{-- <div wire:ignore.self>
-                    <label for="type" class="form-label">1st Level Type</label>
-                    <select class="w-full" id="type" wire:model='type_id'>
-                        <option></option>
-                        @foreach ($types as $type)
-                            <option value="{{ $type->id }}">{{ $type->description }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div wire:ignore.self>
-                    <label for="type2" class="form-label">2nd Level Type</label>
-                    <select class="w-full" id="type" wire:model='type_secondary_id'>
-                        <option></option>
-                        @foreach ($types2 as $type)
-                            <option value="{{ $type->id }}">{{ $type->description }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div wire:ignore.self>
-                    <label for="type3" class="form-label">3rd Level Type</label>
-                    <select class="w-full" id="type" wire:model='type_tertiary_id'>
-                        <option></option>
-                        @foreach ($types3 as $type)
-                            <option value="{{ $type->id }}">{{ $type->description }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div wire:ignore.self>
-                    <label for="type4" class="form-label">4th Level Type</label>
-                    <select class="w-full" id="type" wire:model='type_tertiary_sub_id'>
-                        <option></option>
-                        @foreach ($types4 as $type)
-                            <option value="{{ $type->id }}">{{ $type->description }}</option>
-                        @endforeach
-                    </select>
-                </div> --}}
                 <div wire:ignore>
                     <label for="tags" class="form-label">Tags</label>
                     <select class="w-full tom-select" id="tags" wire:model="archive_tags" multiple>
@@ -158,7 +107,7 @@
                 </div>
                 <div>
                     <label for="tags" class="form-label">File</label>
-                    <input id="file" type="file" class="bg-white form-control" wire:model.live="file" />
+                    <input id="file" type="file" class="p-5 bg-white form-control" wire:model.live="file" />
                     @error('file')
                         <label for="tags" class="form-label text-error">{{ $message }}</label>
                     @enderror

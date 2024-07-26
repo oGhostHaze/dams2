@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <label for="tags" class="form-label">File</label>
-                    <input id="file" type="file" class="bg-white form-control" wire:model.live="file" />
+                    <input id="file" type="file" class="p-5 bg-white form-control" wire:model.live="file" />
                     @error('file')
                         <label for="tags" class="form-label text-error">{{ $message }}</label>
                     @enderror
