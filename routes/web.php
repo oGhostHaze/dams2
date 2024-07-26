@@ -32,9 +32,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('dark-mode-switcher', [DarkModeController::class, 'switch'])->name('dark-mode-switcher');
 Route::get('color-scheme-switcher/{color_scheme}', [ColorSchemeController::class, 'switch'])->name('color-scheme-switcher');
 
-Route::middleware('guest')->get('/login', function () {
-    return view('auth.login');
-});
+// Route::middleware('guest')->get('/login', function () {
+//     return view('auth.login');
+// });
 
 Route::middleware([
     'auth:sanctum',
