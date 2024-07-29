@@ -42,7 +42,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
 
-    Route::get('/top-menu/dashboard', Dashboard::class)->name('top.dashboard');
+    Route::get('/', Dashboard::class)->name('top.dashboard');
 
     Route::get('/pdf-viewer/{archive_id?}', PdfViewer::class)->name('viewer');
     Route::get('/file/viewer/{archive_id}', ViewFile::class)->name('file.view');
@@ -52,7 +52,6 @@ Route::middleware([
     Route::get('/types/{type_id}/third-level', ManageFileTypeTertiaries::class)->name('type.third.manager');
     Route::get('/types/{type_id}/fourth-level', ManageFileTypeTertiariesSub::class)->name('type.fourth.manager');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
-    Route::get('/', Dashboard::class)->name('dashboard1');
 
     Route::get('/file-manager/upload', UploadFile::class)->name('file.upload');
     Route::get('/file-manager/upload/secondary/{type_id}', UploadFileSecondary::class)->name('file.upload.second');
