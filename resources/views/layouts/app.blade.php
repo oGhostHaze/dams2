@@ -32,9 +32,6 @@
         {{ $slot }}
     </main>
 
-    {{-- <x-dark-mode-switcher />
-    <x-color-scheme-switcher /> --}}
-
     {{-- BEGIN: JS Assets --}}
     @livewireScripts
     <script src="{{ mix('dist/js/app.js') }}"></script>

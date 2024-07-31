@@ -121,15 +121,15 @@ class UploadFile extends Component
     public function save()
     {
         $this->validate([
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['nullable', 'string', 'max:255'],
             'file' => 'required|mimes:pdf|max:10000',
             'type_id' => ['required'],
         ]);
 
         $archive = new FileArchive;
-        $archive->title = $this->title;
         $archive->file_name = $this->file->store('documents', 'dams');
         $archive->file_name = $this->file->store();
+        $archive->title = $this->title ?? $this->file->getClientOriginalName();
         $archive->file_ext = $this->file->getClientOriginalExtension();
         $archive->tags = implode(',', $this->archive_tags);
         $archive->type_id = $this->type_id;
