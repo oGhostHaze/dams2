@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ColorSchemeController;
 use App\Http\Controllers\DarkModeController;
+use App\Http\Livewire\Pages\BatchUploading;
 use App\Http\Livewire\Pages\Dashboard;
 use App\Http\Livewire\Pages\ManageFiles;
 use App\Http\Livewire\Pages\ManageFileTypes;
@@ -61,4 +62,6 @@ Route::middleware([
             Route::get('/types', ManageTypes::class)->name('types');
         }
     );
+
+    Route::get('/upload/continuous/{type_id}', BatchUploading::class)->name('batch.upload');
 });

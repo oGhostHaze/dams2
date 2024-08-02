@@ -34,6 +34,9 @@
                 <!-- BEGIN: File Manager Filter -->
                 <div class="flex flex-col-reverse items-center justify-end intro-y sm:flex-row">
                     <div class="flex w-full sm:w-auto">
+                        <a class="mr-2 shadow-md btn btn-primary" href="{{ route('batch.upload', $type_id) }}">
+                            Continuous Upload
+                        </a>
                         <a class="mr-2 shadow-md btn btn-primary" href="{{ route('file.upload.second', $type_id) }}">
                             Upload to Directory
                         </a>
