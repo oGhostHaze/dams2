@@ -172,6 +172,7 @@
                     </div>
                 </div>
                 <div class="col-span-12">
+                    <iframe src="{{ url('/storage/' . $file_name) }}" frameborder="0" width="100%" height="720px"></iframe>
                     <canvas id="viewer" class="block w-2/4"></canvas>
                 </div>
 
