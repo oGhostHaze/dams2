@@ -46,7 +46,7 @@ class UploadFileSecondary extends Component
     {
         $this->validate([
             'title' => ['nullable', 'string', 'max:255'],
-            'file' => 'required|mimes:pdf|max:10000',
+            'file' => 'required|mimes:pdf|max:100000',
             'type_id' => ['required'],
         ]);
 
