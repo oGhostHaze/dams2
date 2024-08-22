@@ -23,7 +23,7 @@ class UploadFileSecondary extends Component
     public function updatedFile()
     {
         $this->validate([
-            'file' => 'required|mimes:pdf|max:10000'
+            'file' => 'required|mimes:pdf|max:100000'
         ]);
     }
 
