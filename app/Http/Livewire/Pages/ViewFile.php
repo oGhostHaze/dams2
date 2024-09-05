@@ -19,8 +19,8 @@ class ViewFile extends Component
     {
         $archive = FileArchive::find($this->archive_id);
         $file_name = str_replace("public/", "", $archive->file_name);
-        $file_name = str_replace("documents/", "", $archive->file_name);
-
+        $file_name = str_replace("documents/", "", $file_name);
+	
         $this->size = Helper::formatSizeUnits(Storage::disk('public')->size($file_name));
         $this->last_modified = Helper::format_date1(Storage::disk('public')->lastModified($file_name));
 
