@@ -32,9 +32,9 @@ class ArchivesReport extends Component
         }
 
         if ($this->start_date) {
-            $archives = $archives->whereBetween('updated_at', [$start_date, $end_date])->get();
+            $archives = $archives->whereBetween('updated_at', [$start_date, $end_date])->orderBy('title')->get();
         } else {
-            $archives = $archives->paginate(20);
+            $archives = $archives->orderBy('title')->paginate(20);
         }
 
 
