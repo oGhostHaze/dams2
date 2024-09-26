@@ -31,7 +31,12 @@ class ArchivesReport extends Component
             }
         }
 
-        $archives = $archives->whereBetween('updated_at', [$start_date, $end_date])->get();
+        if ($this->start_date) {
+            $archives = $archives->whereBetween('updated_at', [$start_date, $end_date])->get();
+        } else {
+            $archives = $archives->paginate(20);
+        }
+
 
         return view('livewire.reports.archives-report', compact(
             'archives',

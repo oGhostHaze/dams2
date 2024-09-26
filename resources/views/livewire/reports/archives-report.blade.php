@@ -134,6 +134,13 @@
                     </table>
                     <!-- END: Directory & Files -->
                 </div>
+                <div class="col-span-12">
+                    <div>
+                        @if ($archives instanceof \Illuminate\Pagination\LengthAwarePaginator)
+                            {{ $archives->links() }}
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
         <!-- END: Content -->
