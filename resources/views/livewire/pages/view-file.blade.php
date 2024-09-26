@@ -169,10 +169,13 @@
                         <a href="{{ url('/storage/' . $file_name) }}" target="_blank"
                             class="ml-5 !text-black btn btn-outline btn-sm">Full
                             View</a>
+                        <a class="ml-2 btn btn-error btn-sm tooltip" title="Delete" onclick="delete_archive()"><i
+                                class="las la-trash"></i></a>
                     </div>
                 </div>
                 <div class="col-span-12">
-                    <iframe src="{{ url('/storage/' . $file_name) }}" frameborder="0" width="100%" height="720px"></iframe>
+                    <iframe src="{{ url('/storage/' . $file_name) }}" frameborder="0" width="100%"
+                        height="720px"></iframe>
                     <canvas id="viewer" class="block w-2/4"></canvas>
                 </div>
 
@@ -286,3 +289,24 @@
         });
     </script>
 </div>
+
+
+@push('scripts')
+    <script>
+        function delete_archive() {
+            Swal.fire({
+                html: `
+                <span class="text-xl font-bold"> Delete this archive? </span>`,
+                showCancelButton: true,
+                confirmButtonText: `Yes`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    Livewire.emit('delete_archive');
+                }
+            });
+        }
+    </script>
+@endpush

@@ -15,7 +15,7 @@ class ManageFileTypeTertiariesSub extends Component
 
     public function render()
     {
-        $archives = FileArchive::where('type_tertiary_id', $this->type_id)->get();
+        $archives = FileArchive::where('type_tertiary_id', $this->type_id)->orderBy('title')->get();
         $tags = Tag::all();
 
         return view('livewire.pages.manage-file-type-tertiaries-sub', compact(

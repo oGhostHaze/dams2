@@ -14,6 +14,7 @@ use App\Http\Livewire\Pages\UploadFileSecondary;
 use App\Http\Livewire\Pages\ViewFile;
 use App\Http\Livewire\PdfViewer;
 use App\Http\Livewire\References\ManageTypes;
+use App\Http\Livewire\Reports\ArchivesReport;
 use Illuminate\Support\Facades\Route;
 
 
@@ -60,6 +61,12 @@ Route::middleware([
     Route::prefix('/references')->name('ref.')->group(
         function () {
             Route::get('/types', ManageTypes::class)->name('types');
+        }
+    );
+
+    Route::prefix('/reports')->name('reports.')->group(
+        function () {
+            Route::get('/archives', ArchivesReport::class)->name('archives');
         }
     );
 

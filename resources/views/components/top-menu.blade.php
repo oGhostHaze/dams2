@@ -28,6 +28,21 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="javascript:;" class="top-menu">
+                <div class="top-menu__icon"> <i data-feather="file-text"></i> </div>
+                <div class="top-menu__title"> Reports <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="{{ route('reports.archives') }}" class="top-menu">
+                        <div class="top-menu__icon"> <i data-feather="list"></i> </div>
+                        <div class="top-menu__title"> Archives </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>
 <!-- END: Top Menu -->

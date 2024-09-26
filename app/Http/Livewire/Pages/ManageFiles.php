@@ -27,7 +27,7 @@ class ManageFiles extends Component
                 $archives = $archives->whereRaw("FIND_IN_SET('" . $tag . "', tags) > 0");
             }
         }
-        $archives = $archives->paginate($this->page_number);
+        $archives = $archives->orderBy('title')->paginate($this->page_number);
         $tags = Tag::all();
         $types = Type::all();
 

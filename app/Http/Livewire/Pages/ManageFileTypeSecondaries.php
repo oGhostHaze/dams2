@@ -14,7 +14,7 @@ class ManageFileTypeSecondaries extends Component
 
     public function render()
     {
-        $archives = FileArchive::where('type_id', $this->type_id)->whereNull('type_tertiary_id')->get();
+        $archives = FileArchive::where('type_id', $this->type_id)->whereNull('type_tertiary_id')->orderBy('title')->get();
         $tags = Tag::all();
         $types = TypeSecondary::where('type_id', $this->type_id)->get();
 
